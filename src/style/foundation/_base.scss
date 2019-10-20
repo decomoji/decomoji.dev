@@ -1,0 +1,46 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+}
+
+body {
+  position: relative;
+  color: #454545;
+  font-family: $ff_ja;
+  font-feature-settings: "palt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: unset;
+  hanging-punctuation: allow-end;
+}
+
+main {
+  display: block;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0 none;
+  text-decoration: none;
+  vertical-align: top;
+  background: transparent;
+}
+
+mark {
+  background-color: transparent;
+}
+
+a {
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}

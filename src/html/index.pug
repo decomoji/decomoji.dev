@@ -1,0 +1,21 @@
+-
+  var _title = ""
+  var _sitename = "デコモジ"
+  var _desc = "デコモジはSlackで使えるカスタムリアクション絵文字です。"
+  var _keywords = "decomoji,デコモジ,リアクション絵文字,Reacji,スタンプ"
+  var _class = "top"
+  var _host = "https://decomoji.dev/"
+  var _pagePath = ""
+  var _permalink = _host+_pagePath
+doctype html
+html(lang="ja")
+  include _partial/meta
+
+  body(class=_class)
+    //- include _partial/header
+
+    main.Main#main(role="main")
+      p オレのデコモジが一番強い。
+      p 明日またここに来てください。本当のカスタムリアクション絵文字をお見せしますよ。
+
+    //- include _partial/footer
