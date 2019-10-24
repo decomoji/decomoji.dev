@@ -1,0 +1,16 @@
+.Header {
+  @at-root {
+    & {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      transition: background-color 0.3s ease-out;
+    }
+
+    .Header__inner {
+      display: flex;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.Main {
+  @at-root {
+    & {
+    }
+
+    .Main__inner {
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+  }
+}
