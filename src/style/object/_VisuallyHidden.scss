@@ -1,4 +1,4 @@
-.u-visuallyHidden {
+.VisuallyHidden {
   position: absolute !important;
   height: 1px !important;
   width: 1px !important;
@@ -8,16 +8,4 @@
   overflow: hidden !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   clip-path: inset(50%) !important;
-}
-
-.u-pc {
-  @include sp {
-    display: none;
-  }
-}
-
-.u-sp {
-  @include pc {
-    display: none;
-  }
 }
