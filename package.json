@@ -15,8 +15,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build && npm run cpx:redirects",
-    "cpx:redirects": "cpx './_redirects' docs/"
+    "build": "gulp build"
   },
   "browserslist": [
     "last 2 versions",
