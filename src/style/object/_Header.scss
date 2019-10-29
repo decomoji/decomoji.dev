@@ -9,8 +9,18 @@
 
     .Header__inner {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-right: 60px;
       margin-left: 60px;
+      height: 70px;
+    }
+
+    .Header__logo {
+      .Logo {
+        width: 150px;
+        height: 64.6px;
+      }
     }
   }
 }
