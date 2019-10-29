@@ -1,0 +1,14 @@
+.Section {
+  @at-root {
+    & {
+    }
+
+    & + & {
+      padding-top: 120px;
+    }
+
+    .Section__inner {}
+    .Section__header {}
+    .Section__body {}
+  }
+}
