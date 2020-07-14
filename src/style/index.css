@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* 色・幅・夢・静寂・そして愛 */
+:root {
+  --colorBlack: #15171a;
+  --colorWhite: #fefeff;
+  --colorTomato: #dd3b40;
+  --colorChocolate: #c05b2c;
+  --colorGold: #9f7e00;
+  --colorOlive: #688200;
+  --colorForest: #008c22;
+  --colorTeal: #008780;
+  --colorCerulean: #0081b1;
+  --colorDenim: #477f9b;
+  --colorDanube: #5d79aa;
+  --colorLavender: #a156d2;
+  --colorAzalea: #d43892;
+  --colorCoral: #a36969;
+  --colorBlackRGB: 21, 23, 26;
+  --colorWhiteRGB: 254, 254, 255;
+  --colorTomatoRGB: 240, 59, 64;
+  --colorChocolateRGB: 192, 91, 44;
+  --colorGoldRGB: 159, 126, 0;
+  --colorOliveRGB: 104, 130, 0;
+  --colorForestRGB: 0, 140, 34;
+  --colorTealRGB: 0, 135, 128;
+  --colorCeruleanRGB: 0, 129, 177;
+  --colorDenimRGB: 71, 127, 155;
+  --colorDanubeRGB: 93, 121, 170;
+  --colorLavenderRGB: 161, 86, 210;
+  --colorAzaleaRGB: 212, 56, 146;
+  --colorCoralRGB: 163, 105, 105;
+
+  --colorBase: var(--colorBlack);
+  --colorBaseInvert: var(--colorWhite);
+  --colorLink: var(--colorBlack);
+  --colorLinkInvert: var(--colorWhite);
+  --colorFocus: rgba(var(--colorBlackRGB), 0.5);
+  --colorFocusInvert: rgba(var(--colorWhiteRGB), 0.5);
+
+  --bgBase: var(--colorWhite);
+  --bgBand: var(--colorBlack);
+
+  --borderInput: var(--colorBlackRGB);
+  --borderInputFocus: var(--colorBlackRGB);
+
+  --contentPadding: 0.75rem;
+  --contentWidth: 40rem;
+}
+
+/* いわゆるリセットCSS */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--colorBlack);
+  font-size: 1.125rem;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--bgBase);
+}
+
+main {
+  display: block;
+}
+
+/* Foundation */
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: var(--colorLink);
+}
+
+a.-invert:link,
+a.-invert:visited,
+a.-invert:hover,
+a.-invert:focus,
+a.-invert:active {
+  color: var(--colorLinkInvert);
+}
+
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--colorFocus);
+}
+
+.-invert:focus {
+  box-shadow: 0 0 0 4px var(--colorFocusInvert);
+}
+
+/* https://github.com/ampproject/amphtml/blob/2e9a940e78df8de38a6c06a0772aeaa4839a24d1/css/ampshared.css#L164-L204 */
+.VisuallyHidden {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  display: block !important;
+  width: 4px !important;
+  height: 4px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  visibility: visible !important;
+}

@@ -2,56 +2,40 @@
   "private": true,
   "name": "decomoji.dev",
   "version": "1.0.0",
-  "description": "オレのデコモジが一番強い",
-  "author": {
-    "name": "oti",
-    "email": "otiext@gmail.com",
-    "url": "https://decomoji.dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/decomoji/decomoji.dev"
-  },
+  "description": "デコモジ公式ウェブサイト",
+  "main": "dist/index.html",
+  "author": "decomoji",
   "license": "MIT",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "parcel src/index.pug --open --out-dir .cache",
+    "build": "parcel build src/index.pug --no-source-maps --public-url ./"
   },
-  "browserslist": [
-    "last 2 versions",
-    "ie >= 9",
-    "Android >= 4",
-    "iOS >= 6"
-  ],
   "dependencies": {
-    "cpx": "^1.5.0",
-    "easing-sass-function": "^1.1.0",
-    "focus-trap": "^5.0.2",
-    "no-scroll": "^2.1.1",
-    "normalize.css": "^8.0.1",
-    "smooth-gradient-sass-function": "^1.0.0",
-    "smooth-scroll": "^16.1.0",
-    "what-input": "^5.2.3"
+    "core-js": "^3.6.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-loader": "^8.0.6",
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-changed": "^3.2.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-uglify-es": "^1.0.4",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^7.0.0",
-    "webpack": "^4.39.0",
-    "webpack-stream": "^5.2.1"
+    "autoprefixer": "^9.8.0",
+    "commitizen": "^4.1.2",
+    "cz-customizable": "^6.2.0",
+    "husky": "^4.2.5",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "pug": "^2.0.4",
+    "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
   }
 }

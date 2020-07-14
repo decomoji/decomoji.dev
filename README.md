@@ -1,13 +1,30 @@
 # decomoji.dev
 
-オレのデコモジが一番強い。
+https://decomoji.dev/
 
-明日またここに来てください。本当のカスタムリアクション絵文字をお見せしますよ。
+[デコモジ](https://github.com/decomoji/slack-reaction-decomoji)の公式ウェブサイトです。
 
-## 支援してほしい
+## 開発
 
-[Patreon](https://www.patreon.com/bePatron?u=486549)でアレをやってます。
+Parcel を使ってバンドルしています。
+
+`git clone`したらプロジェクトルートに移動。
+
+```
+npm ci
+npm start
+```
+
+`localhost:1234`がブラウザで開きます。
+
+## ビルド
+
+```
+npm run build
+```
+
+`dist/`にファイルが出力されます。
 
 ## ライセンス
 
-Copyright (c) oti.
+MIT.
