@@ -7,15 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const ThemeName = ThemeNames[Math.floor(Math.random() * ThemeNames.length)];
   const $html = document.documentElement;
   const $body = document.body;
-  const $mode = document.querySelector("#Mode");
+  const $switch = document.querySelector("#Switch");
 
   // body 要素にテーミングクラスを追加する
   $body.classList.add(ThemeName);
 
   // ダークモードのトグル
-  $mode.addEventListener(
+  $switch.addEventListener(
     "change",
-    () => $html.classList.toggle("-dark"),
+    (ev: Event) => {
+      $html.classList.toggle(
+        "-dark",
+        Number((ev.target as HTMLInputElement).value)
+      );
+    },
     false
   );
 });

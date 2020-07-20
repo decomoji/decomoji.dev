@@ -32,10 +32,13 @@ html(lang="ja")
         span.Copy__phrase Slack のリアクション機能で使える
         span.Copy__phrase 最強カスタム絵文字セットです
       
-      p.Switch
-        label.Switch__label(for="Mode")
-          input.Switch__input#Mode(type="checkbox")
-          span.Switch__text ダークモード表示
+      form.Switch#Switch
+        label.Switch__label
+          input.Switch__input(name="switch", type="radio", value="0", checked)
+          span.Switch__text ライトモード
+        label.Switch__label
+          input.Switch__input(name="switch", type="radio", value="1")
+          span.Switch__text ダークモード
 
       .Sample(aria-labelledby="Decomojis-desc")
         .VisuallyHidden#Decomojis-desc デコモジ v5 からいくつか抜粋した様子。デコモジには5000以上の豊富なカスタム絵文字があります。

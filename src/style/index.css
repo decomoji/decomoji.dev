@@ -185,6 +185,10 @@ body::before {
   fill: #f6f6f6;
 }
 
+.Switch {
+  margin: 1rem 0;
+}
+
 .Sample {
   display: grid;
   gap: 6px;
