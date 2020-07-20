@@ -27,4 +27,4 @@ npm run build
 
 ## ライセンス
 
-MIT.
+Copyright (c) oti. Under the [MIT License](LICENSE).
