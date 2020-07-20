@@ -2,192 +2,188 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
-    title デコモジ
+    title デコモジ v5
     meta(content="width=device-width", name="viewport")
-    meta(name='viewport', content='width=device-width,initial-scale=1.0')
-    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&subset=japanese&display=swap')
+    meta(name="viewport", content="width=device-width,initial-scale=1.0")
+    meta(name="description", content="「デコモジ」は Slack のリアクション機能で使える、最強カスタム絵文字セットです。")
+    meta(name="keywords", content="decomoji,slack,custom,emoji")
+    meta(property="og:title", content="デコモジ v5")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="https://decomoji.dev")
+    meta(property="og:image", content="https://decomoji.dev/image/og-image.png")
+    meta(property="og:site_name", content="デコモジ v5")
+    meta(property="og:description", content="「デコモジ」は Slack のリアクション機能で使える、最強カスタム絵文字セットです。")
+    meta(property="og:local", content="ja")
+
+    link(rel="image_src", href="https://decomoji.dev/image/og-image.png")
+    link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Noto+Sans+JP:wght@400;700&display=swap&subset=japanese")
     link(rel="stylesheet", href="style/index.css")
+    link(rel="canonical", href="https://decomoji.dev")
     script(src="script/index.ts")
 
   body
-    svg.Logo(role="img", version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", viewbox="0 0 100 32.3", enable-background="new 0 0 100 32.3", xml:space="preserve")
-      title デコモジロゴ
-      path.Logo__path(fill="#000", d="M25.9,8c1.4-0.5,1.7,1.1,1.2,1.8c-0.4,0.5-1.4,1.3-2,0.7c-0.7-0.6-1.2-0.4-1.5-0.2c-2.2,1-10.2,5.3-12.3,5.6\
-      c-2.5,0.3-1.4-1.9,0-2.2c4.5-1,11-4.9,12.6-5.2C24.5,8.4,24.6,8.5,25.9,8z M31.1,8.3c0.6-1-0.1-0.7-0.7-0.7c-0.7,0-1-1.6-0.9-4.1\
-      c0.1-1.2-1.6-1.3-1.6,0c0,2,0.3,4.2,1.2,6.1C29.6,10.6,30.7,9.1,31.1,8.3z M33.7,9c0.1-0.6-0.1-3.2,1.4-7.1c0.7-1.9-1.1-2.5-1.9-1.3\
-      c-0.4,0.7-0.6,1.7-0.6,2.3c-0.2,1.3-0.3,2.8,0.1,5.6C32.8,10.1,33.5,10,33.7,9z M96.5,13.3c-0.6-1.8-0.5-3.4-0.4-5.9\
-      c0.1-1.2-1.4-1.3-1.7,0.2c-0.2,1.5,0.1,4.1,1.2,5.9C96.2,14.3,96.7,13.7,96.5,13.3z M98.7,13.5c0.2-0.7-0.3-2.2,1.1-6\
-      c0.7-1.9-1.1-3.2-1.6-1.8c-0.9,2.3-1,5.1-0.6,7.9C97.8,14.4,98.4,14.5,98.7,13.5z M21.8,19.1c0.3-0.2,0.5-0.1,0.4,0.3\
-      c0,0.3-1,8.5-2,9.9c-0.3,0.5-0.3,1.3,0.1,2.3s1.4,0.7,1.8-0.3c0.4-1,0.6-2.6,0.7-3.9c0.1-1.4,0.8-5.9,1.2-8.6\
-      c0.1-0.5,0.1-0.7,0.5-0.9c0.5-0.3,2.2-1.5,2.8-1.6c0.6-0.1,1-0.4,1-0.8c0.1-0.4,0.1-1.5-0.4-1.8c-0.8-0.4-2.6,1.1-3.2,1.6\
-      c-1.4,1-13.3,7.8-23.8,11c-1.5,0.5-0.8,2.3,0.6,2C6.4,27,21.3,19.3,21.8,19.1z M32.7,26c-1.5,1,0.8,2.7,2.2,1.4\
-      c1.4-1.4,2.9-2,6.5-3.1c1-0.3,1.3,0,1.1-1.6s1.2-4.8,1.9-6.4s-0.9-1.5-1.3-1.9s0.2-0.7-1.9-0.5c-2,0.1-8.8,3.4-10.3,4.5\
-      c-2.1,1.7,0.7,3.7,2.3,1.5c1.3-1.8,6.9-4.1,8.3-4.3s1.3,0.4,0.7,1.9c-0.6,1.5-1,2.2-1,3.6c0,1.1-0.2,1.3-1,1.6\
-      C39.8,22.9,34.2,25,32.7,26z M80,15.9c-2.3-1.6-5-3.5-6-4c-2.5-1-2.8,2.4-0.2,2.7c1.3,0.1,3.4,1.5,5.2,2.8\
-      C79.7,17.9,80.9,16.5,80,15.9z M66.5,27.4c-2,0.8-6.8-1.6-8.3-10.6c0-0.2,0-0.3,0.1-0.3c2.9-1.1,8.1-2.8,10-3.2\
-      c1.4-0.3,3.2-3.5-0.2-2.3c-0.9,0.3-6.5,2.5-10,3.9c-0.1,0.1-0.2,0-0.2-0.1c-0.2-1.6-0.2-3.3-0.1-5.3c0-0.7,0.3-0.9,0.7-1.1\
-      c0.7-0.4,3-1.4,3.9-1.3c0.9,0.1,1.1-0.2,1.5-0.7c0.6-0.7,0.7-2.3-0.7-1.9C56.4,6.5,56,8,51.6,8.9c-1.4,0.3-2.5,2.4,0,2.2\
-      c1-0.1,2.5-0.7,4.1-1.4c0.2,0,0.2,0.1,0.2,0.4c0,0.2-0.1,2.3,0.3,5.1c0,0,0,0,0,0c0.1,0.3,0,0.4-0.2,0.5c-3.6,1.5-6.4,2.6-6.8,2.7\
-      c-2.3,0.6-2.5,0.5-2.9,1c-0.5,0.7-0.3,1.5,1.2,1.5c0.6,0,1,0.2,2.4-0.7c1.5-0.9,3.6-1.9,6.5-3c0.2,0,0.2,0,0.3,0.2c0,0,0,0,0,0\
-      c1.1,4.7,2.9,10,9.1,12.3C71.1,31.6,68.6,26.5,66.5,27.4z M75.3,27.9c2.4-1.5,17.7-8,20.5-8.5c2.9-0.5,0.4-3.1-3.6-1.8\
-      c-1.4,0.4-12.8,6.9-17.4,7.6C70.8,25.7,72.9,29.4,75.3,27.9z M75.9,9c0.8,0.4,2.2,1.9,2.9,2.5c0.5,0.5,1.6-0.6,1.1-1.3\
-      c-0.5-0.8-1-1.1-2.1-2.8C76.6,5.7,73.8,7.9,75.9,9z")
+    main.Main
+      h1.Title
+        include ./_mod/_svg-logo.pug
 
-    .Main
-      section.Section#introduction
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text デコモジ for Slackリアクション絵文字
-              .SectionHeading__ornament
-
-          .Section__body
-            p Slackのリアクション機能で使えるカスタム絵文字のアセットです。「デコモジ」はそれらの１つ１つ、または総称です。
-
-            figure.Figure
-              img.Figure__image(src="/assets/image/screenshot_01.png", alt="")
-              figcaption.Figure__caption Slackのメッセージにリアクションで使うと、カラフルで楽しげな印象に早変わり！
-
-            figure.Figure
-              img.Figure__image(src="/assets/image/screenshot_02.png", alt="")
-              figcaption.Figure__caption 「既読しました」の代わりにコンテクストを埋め込んでコミュニケーションが加速します！
+      p.Copy
+        span.Copy__phrase 「デコモジ」は
+        span.Copy__phrase Slack のリアクション機能で使える
+        span.Copy__phrase 最強カスタム絵文字セットです
       
-      section.Section#features
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text 特徴
-              .SectionHeading__ornament
+      p.Switch
+        label.Switch__label(for="Mode")
+          input.Switch__input#Mode(type="checkbox")
+          span.Switch__text ダークモード表示
 
-          .Section__body
-            dl.DataList
-              dt.DataList__key カラフルなテキスト画像
-              dd.DataList__value Slack内でのユースケースにおいてコントラスト比0.0以上を担保しました！
-            dl.DataList
-              dt.DataList__key ２行取りの割注レイアウト
-              dd.DataList__value 職人が１つ１つ手作業で字詰めした温かみのある割注は、独特の略語や無理のある長体をもコンテンツに変えます！
-            dl.DataList
-              dt.DataList__key JUMBOMOJI・高精細ディスプレイ対応
-              dd.DataList__value 64px角で作られたデコモジだから拡大してもめちゃキレイ！
-            dl.DataList
-              dt.DataList__key 読み仮字をアルファベット表記にしたファイル名
-              dd.DataList__value 例えば、「ナルホド」は naruhodo.png です。多くの場合このファイル名がデコモジ名となるので、半角で : を打ってからそのままデコモジを入力できます！
-            dl.DataList
-              dt.DataList__key ダークモード対応
-              dd.DataList__value 世界初！#[sup: a(href="#note-01") *1]１つのファイルでダークモードでも読みやすさを担保しました！
-            
-            p デコモジは１つの画像の中に無限の文字数を組み込める画期的な圧縮システムです。
-            
-            p ハイコンテキスト！　だから使って楽しい！　Slackで今よりもっと迅速なコミュニケーションを可能にする、それがデコモジです！
+      .Sample(aria-labelledby="Decomojis-desc")
+        .VisuallyHidden#Decomojis-desc デコモジ v5 からいくつか抜粋した様子。デコモジには5000以上の豊富なカスタム絵文字があります。
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/a-ne.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/aguri-.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/akeome.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/akirame.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/annsinn.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/annzenndaiiti.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/arigatai_.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/arigati.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/arigatougozaimasu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/aruaru.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/auto_.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/bagurepo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/baibusu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/bennri.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/buzisibou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/cssisawesome.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/daijobanai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/daijoubu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/dareuma.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/desudesu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/desuyone.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/douyatteyatteruno.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/eeyann.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/emoi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/erai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/geijutu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/gennkiegao.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ginnnodanngann.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/giruthi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/gomennnasai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/gyoukaihyoujunn.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/hai-.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/he-.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/hitohanaze.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/hobohobo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/honntoda.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/hosii.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/hourennsou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/iginasi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/iine_.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ikkennrakutyaku.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/inisienosiyou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ippannkoukai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ippatuatetarou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/isdare.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/isnani.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/iyanayokann.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/iyasonorikutuhaokasii.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kaiketuzumi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kami.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kann.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kannzennrikai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kasikomariko.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kawaii.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kennkoudaiiti.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kinyuuzumi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/koseiyutaka.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kousokuzennsinn.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kozirase.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/kurorekisi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/lgtm.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/makasero.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/mazikayo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/medetai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/menndoi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/monndaiari.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/moudame.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/mousiranai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/mozisuu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/mugennnokanousei.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/mujunn.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/muteki.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/nakayosi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/nanntekottai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/naruhodanai.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/naruhodo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/naruhodowakarann.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/nazo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ne.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/odaizini.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/oisii.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/okotta_.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/okottenaiyo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/omedeto.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/oni.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/osakenisitureisimasu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/osewaninatteorimasu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/osyann.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/owakariitadaketadarouka_.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/pawa-purei.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/potitto.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ranntitaimu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/rikainngu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ryoukaidesu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/sagerisyasu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/saisyohaminnnamikeikenn.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/sasugada.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/seityoutuu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/seyanngu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/siranakatta.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/siyoudesu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/sokowonanntoka.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/sonokotobagakikitakatta.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/soudesu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/souiutokodazo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/suko.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/syousyouomatiwo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/syugodeka.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/syuku.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tabunnugokutoomoukarariri-susiyouze.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/taiouzumi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tannome.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tanonnda.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tanosimi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tasikani.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tennsaikayo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tiannwarui.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tikennda.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tomarunnjanelezo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tukaeru.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tyottodekiru.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/ukeru.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/unn.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/usodesyo.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/wwww.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/yabasou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/yattane.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/yazawaganannteiukana.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/yokuwakaranaikedonaotta.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/yuusyou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/zatu.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/zinnseijouhou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/zissitumuryou.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/extra/tumari.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/extra/nanndemodekomozi.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="./image/andmore.png", loading="lazy", aria-hidden="true")
+        img.Sample__img(src="https://finder.decomoji.dev/decomoji/basic/tenntenntenn.png", loading="lazy", aria-hidden="true")
 
-            p#note-01
-              small 画像群のアセットプロダクトとしておそらくたぶんきっと世界初です
-      
-      section.Section#categories
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text ３つのカテゴリー
-              .SectionHeading__ornament
+      a.Btn(href="./archive/decomoji-v5.zip", download)
+        span.material-icons(role="img", aria-hidden="true") save_alt
+        span.Btn__text ダウンロード
 
-          .Section__body
-            p デコモジは３つのカテゴリーに分けられています。
+      a.Btn(href="https://git.io/decomoji", target="_blank", rel="noopener")
+        include ./_mod/_svg-github.pug
+        span.Btn__text GitHub
 
-            dl.DataList
-              dt.DataList__key 基本セット（basic）
-              dd.DataList__value きっとおそらくたぶん、どんなSlackチームにもマッチする安心で安全なデコモジのセットです。
-            dl.DataList
-              dt.DataList__key 拡張セット（extra）
-              dd.DataList__value オーサーが作りたいと思った気持ちのまま作り続けて収集がつかなくなったセットです。デコモジがより楽しくなる可能性を大いに秘めています。
-            dl.DataList
-              dt.DataList__key 危険セット（explicit）
-              dd.DataList__value: strong このセットには暴力的なものや性的なものが含まれており、多くの人にとって安心で安全とは言い難いデコモジのセットです。利用には十分注意してください。
-            
-            p 最初は基本セットのみを利用し、慣れてきたら拡張セットを覗いてみてください。危険セットは本当に暴力的で性的なので、気持ちが不安定な時は見ないようにしてください。
-
-            //- p なぜ危険セットのようなものを作ったのかについては、オーサーが書いたこのエントリを参照してください。
-      
-      section.Section#installation
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text インストール
-              .SectionHeading__ornament
-
-          .Section__body
-      
-      section.Section#finder
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text デコモジを探す
-              .SectionHeading__ornament
-
-          .Section__body
-            p もしかして全てのカテゴリーをインストールしていただけましたか？　ありがとうございます！
-
-            p しかしデコモジに「何があるのか」を知らないと使うことができません。
-
-            p そこで我々は、デコモジの最新版のリストを取得し、インクリメンタルに検索するウェブアプリを作りました。
-            
-            p それが decomoji-finder です！
-
-            figure.Figure
-              img.Figure__image(src="/assets/image/screenshot_03.gif", alt="")
-              figcaption.Figure__caption decomoji-finder で「あれ〜あのデコモジなんだっけ……」を曖昧検索しましょう！
-
-            p decomoji-finder は入力した文字列で検索するだけでなく、自分がリアクションで使った時の青い背景の表示やダークモードの表示もエミュレートできます。もちろん、全てのデコモジをただ眺めるだけだってできます。
-
-            p.Small もしデコモジの画像データやファイル名にミスを見つけたら、こっそり教えてくださいね！
-      
-      section.Section#case-study
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text 採用事例
-              .SectionHeading__ornament
-
-          .Section__body
-            p デコモジは名だたる組織の社内SlackやプロジェクトSlackで使われています！
-
-            ul.SimpleList
-              li.SimpleList__item 株式会社まぼろし
-              li.SimpleList__item 株式会社ピクセルグリッド
-              li.SimpleList__item 株式会社AbemaTV
-              li.SimpleList__item 株式会社シフトブレイン
-              li.SimpleList__item 株式会社トゥーアール
-              li.SimpleList__item 株式会社サイバーエージェント
-              li.SimpleList__item 株式会社mediba
-              li.SimpleList__item ...他多数（順不同）
-
-            p このプロダクトに興味を持っていただけたなら、ぜひあなたのSlackチームにインストールしてください！
-      
-      section.Section#supports
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text 支援
-              .SectionHeading__ornament
-
-          .Section__body
-      
-      section.Section#closing
-        .Section__inner
-          header.Section__header
-            h2.SectionHeading
-              .SectionHeading__text デコモジのある生活へ
-              .SectionHeading__ornament
-
-          .Section__body
-            p 我々は日々、我々のデコモジが一番強いEmojiだと信じてこのプロダクトを育てています。
-
-            p Slackのみならず全てのコミュニケーションツールでデコモジを利用できたとしたら、なんと素晴らしいでしょう！
-
-            p 実はデコモジはMITライセンスなので、あなたのプロダクトに組み込んで利用することが可能です。
-
-            p 特に連絡は必要ありません。でもコピーライトは消さないようにお願いします。さらにクレジットを入れてくれたらとても嬉しい！
-
-            p デコモジについてのあらゆる問い合わせは decomoji.dev@gmail.com で受け付けています。
-
-            p デコモジでデジタルコミュニケーションがより豊かなものになりますように……それが我々の願いです。
+    footer.Footer
+      small.Footer__smal Copyright ©︎ 2015 decomoji consortium and other contributors. Under the MIT License.
