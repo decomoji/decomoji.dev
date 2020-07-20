@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-/* 色・幅・夢・静寂・そして愛 */
 :root {
-  --colorBlack: #15171a;
-  --colorWhite: #fefeff;
+  --colorBlack: #1b1d21;
+  --colorDark: #232529;
+  --colorWhite: #ffffff;
+  --colorLight: #f6f6f6;
   --colorTomato: #dd3b40;
   --colorChocolate: #c05b2c;
   --colorGold: #9f7e00;
@@ -16,8 +17,10 @@
   --colorLavender: #a156d2;
   --colorAzalea: #d43892;
   --colorCoral: #a36969;
-  --colorBlackRGB: 21, 23, 26;
-  --colorWhiteRGB: 254, 254, 255;
+  --colorBlackRGB: 27, 29, 33;
+  --colorDarkRGB: 35, 37, 41;
+  --colorWhiteRGB: 255, 255, 255;
+  --colorLightRGB: 246, 246, 246;
   --colorTomatoRGB: 240, 59, 64;
   --colorChocolateRGB: 192, 91, 44;
   --colorGoldRGB: 159, 126, 0;
@@ -31,21 +34,85 @@
   --colorAzaleaRGB: 212, 56, 146;
   --colorCoralRGB: 163, 105, 105;
 
-  --colorBase: var(--colorBlack);
-  --colorBaseInvert: var(--colorWhite);
-  --colorLink: var(--colorBlack);
-  --colorLinkInvert: var(--colorWhite);
-  --colorFocus: rgba(var(--colorBlackRGB), 0.5);
-  --colorFocusInvert: rgba(var(--colorWhiteRGB), 0.5);
+  --colorBase: var(--colorDark);
+  --colorLink: var(--colorWhite);
+  --colorFocus: rgba(var(--colorDarkRGB), 0.5);
 
   --bgBase: var(--colorWhite);
-  --bgBand: var(--colorBlack);
+  --bgDecomoji: var(--colorLight);
+  --bgBand: var(--colorLight);
+  --bgLink: var(--colorWhite);
 
-  --borderInput: var(--colorBlackRGB);
-  --borderInputFocus: var(--colorBlackRGB);
+  --borderInput: var(--colorDarkRGB);
+  --borderInputFocus: var(--colorDarkRGB);
 
-  --contentPadding: 0.75rem;
-  --contentWidth: 40rem;
+  --commonPad: 1rem;
+  --bodyWidth: 80rem;
+}
+
+/* 表示モード */
+.-dark {
+  --colorBase: var(--colorLight);
+  --colorFocus: rgba(var(--colorLightRGB), 0.5);
+
+  --bgBase: var(--colorBlack);
+  --bgDecomoji: var(--colorDark);
+  --bgBand: var(--colorDark);
+  --bgLink: var(--colorLight);
+}
+
+/* テーミング */
+.-Tomato {
+  --bgLink: var(--colorTomato);
+  --colorFocus: rgba(var(--colorTomatoRGB), 0.5);
+}
+.-Tomato {
+  --bgLink: var(--colorTomato);
+  --colorFocus: rgba(var(--colorTomatoRGB), 0.5);
+}
+.-Chocolate {
+  --bgLink: var(--colorChocolate);
+  --colorFocus: rgba(var(--colorChocolateRGB), 0.5);
+}
+.-Gold {
+  --bgLink: var(--colorGold);
+  --colorFocus: rgba(var(--colorGoldRGB), 0.5);
+}
+.-Olive {
+  --bgLink: var(--colorOlive);
+  --colorFocus: rgba(var(--colorOliveRGB), 0.5);
+}
+.-Forest {
+  --bgLink: var(--colorForest);
+  --colorFocus: rgba(var(--colorForestRGB), 0.5);
+}
+.-Teal {
+  --bgLink: var(--colorTeal);
+  --colorFocus: rgba(var(--colorTealRGB), 0.5);
+}
+.-Cerulean {
+  --bgLink: var(--colorCerulean);
+  --colorFocus: rgba(var(--colorCeruleanRGB), 0.5);
+}
+.-Denim {
+  --bgLink: var(--colorDenim);
+  --colorFocus: rgba(var(--colorDenimRGB), 0.5);
+}
+.-Danube {
+  --bgLink: var(--colorDanube);
+  --colorFocus: rgba(var(--colorDanubeRGB), 0.5);
+}
+.-Lavender {
+  --bgLink: var(--colorLavender);
+  --colorFocus: rgba(var(--colorLavenderRGB), 0.5);
+}
+.-Azalea {
+  --bgLink: var(--colorAzalea);
+  --colorFocus: rgba(var(--colorAzaleaRGB), 0.5);
+}
+.-Coral {
+  --bgLink: var(--colorCoral);
+  --colorFocus: rgba(var(--colorCoralRGB), 0.5);
 }
 
 /* いわゆるリセットCSS */
@@ -55,48 +122,126 @@
   box-sizing: border-box;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: var(--colorBlack);
-  font-size: 1.125rem;
-  font-family: "Noto Sans JP", sans-serif;
-  background-color: var(--bgBase);
-}
-
-main {
-  display: block;
-}
-
-/* Foundation */
-a:link,
-a:visited,
-a:hover,
-a:focus,
-a:active {
-  color: var(--colorLink);
-}
-
-a.-invert:link,
-a.-invert:visited,
-a.-invert:hover,
-a.-invert:focus,
-a.-invert:active {
-  color: var(--colorLinkInvert);
-}
-
 :focus {
   outline: none;
   box-shadow: 0 0 0 4px var(--colorFocus);
 }
 
-.-invert:focus {
-  box-shadow: 0 0 0 4px var(--colorFocusInvert);
+html {
+  margin: 0;
+  padding: 0;
+  color: var(--colorBase);
+  background-color: var(--bgBase);
+}
+
+body {
+  display: grid;
+  grid-template-rows: 3px 1fr auto;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 1.125rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body::before {
+  content: "";
+  border-width: 3px 0 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    var(--colorTomato),
+    var(--colorChocolate),
+    var(--colorGold),
+    var(--colorOlive),
+    var(--colorForest),
+    var(--colorTeal),
+    var(--colorCerulean),
+    var(--colorDenim),
+    var(--colorDanube),
+    var(--colorLavender),
+    var(--colorAzalea),
+    var(--colorCoral)
+  );
+  border-image-slice: 100% 0 0;
+  border-image-repeat: stretch;
+  width: 100%;
+}
+
+.Main {
+  margin: auto;
+  padding: var(--commonPad);
+  max-width: var(--bodyWidth);
+  width: 100%;
+  text-align: center;
+}
+
+.Logo {
+  width: 250px;
+  height: 80.65px;
+}
+
+.-dark .Logo path {
+  fill: #f6f6f6;
+}
+
+.Sample {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+  margin: calc(var(--commonPad) * 2) 0;
+}
+
+.Sample__img {
+  box-sizing: content-box;
+  padding: 6px;
+  border-radius: 3px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--bgDecomoji);
+}
+
+.Copy__phrase {
+  display: inline-block;
+}
+
+.Label {
+  margin: 1rem 0;
+}
+
+.Btn {
+  display: inline-flex;
+  margin: var(--commonPad) calc(var(--commonPad) / 2) 0;
+  padding: calc(var(--commonPad) / 2) var(--commonPad);
+  border: 1px solid var(--bgLink);
+  border-radius: 3px;
+  vertical-align: top;
+  background-color: var(--bgLink);
+}
+
+.Btn:link,
+.Btn:visited,
+.Btn:hover,
+.Btn:focus,
+.Btn:active {
+  color: var(--colorLink);
+  text-decoration: none;
+}
+
+.Btn__text {
+  padding-left: calc(var(--commonPad) / 4);
+}
+
+.Btn .Svg-github {
+  width: 27px;
+  height: auto;
+  vertical-align: top;
+}
+
+.Footer {
+  padding: var(--commonPad);
+  text-align: center;
+  background-color: var(--bgBand);
 }
 
 /* https://github.com/ampproject/amphtml/blob/2e9a940e78df8de38a6c06a0772aeaa4839a24d1/css/ampshared.css#L164-L204 */
