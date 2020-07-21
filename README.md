@@ -2,7 +2,7 @@
 
 https://decomoji.dev/
 
-[デコモジ](https://github.com/decomoji/slack-reaction-decomoji)の公式ウェブサイトです。
+[デコモジ](https://github.com/decomoji/decomoji)の公式ウェブサイトです。
 
 ## 開発
 
