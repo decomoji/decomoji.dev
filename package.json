@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "decomoji.dev",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "デコモジ公式ウェブサイト",
   "main": "dist/index.html",
   "author": "decomoji",
